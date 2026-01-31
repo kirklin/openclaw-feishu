@@ -21,7 +21,11 @@ This project follows the Hexagonal Architecture (Ports and Adapters) pattern to 
 ### Installation
 
 ```bash
-pnpm install
+# Via OpenClaw CLI
+openclaw plugins install openclaw-feishu
+
+# Or via npm
+npm install openclaw-feishu
 ```
 
 ### Configuration

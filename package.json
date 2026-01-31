@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@10.28.2",
-  "description": "_description_",
+  "description": "Feishu/Lark enterprise messaging plugin for OpenClaw.",
   "author": "Kirk Lin <https://github.com/kirklin>",
   "license": "MIT",
   "funding": "https://www.buymeacoffee.com/linkirk",
@@ -13,7 +13,12 @@
     "url": "git+https://github.com/kirklin/openclaw-feishu.git"
   },
   "bugs": "https://github.com/kirklin/openclaw-feishu/issues",
-  "keywords": [],
+  "keywords": [
+    "openclaw",
+    "feishu",
+    "lark",
+    "plugin"
+  ],
   "sideEffects": false,
   "exports": {
     ".": "./dist/index.mjs",
@@ -23,8 +28,31 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "files": [
-    "dist"
+    "dist",
+    "openclaw.plugin.json"
   ],
+  "openclaw": {
+    "extensions": [
+      "./dist/index.mjs"
+    ],
+    "channel": {
+      "id": "feishu",
+      "label": "Feishu",
+      "selectionLabel": "Feishu/Lark (飞书)",
+      "docsPath": "/channels/feishu",
+      "docsLabel": "feishu",
+      "blurb": "Feishu/Lark enterprise messaging plugin.",
+      "aliases": [
+        "lark"
+      ],
+      "order": 1
+    },
+    "install": {
+      "npmSpec": "openclaw-feishu",
+      "localPath": ".",
+      "defaultChoice": "pnpm"
+    }
+  },
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",
@@ -37,6 +65,9 @@
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks",
     "up": "taze latest -r -w -I"
+  },
+  "peerDependencies": {
+    "openclaw": "^2026.1.30"
   },
   "dependencies": {
     "@kirklin/logger": "catalog:dev",

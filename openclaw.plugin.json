@@ -1,0 +1,27 @@
+{
+  "id": "feishu",
+  "channels": [
+    "feishu"
+  ],
+  "skills": [],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "appId": {
+        "type": "string"
+      },
+      "appSecret": {
+        "type": "string"
+      },
+      "agentId": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "appId",
+      "appSecret",
+      "agentId"
+    ]
+  }
+}
