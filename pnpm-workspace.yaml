@@ -7,6 +7,8 @@ packages:
   - docs
   - packages/*
   - examples/*
+catalog:
+  dotenv: ^16.4.7
 catalogs:
   cli:
     "@antfu/ni": ^28.2.0

@@ -41,6 +41,7 @@
   "dependencies": {
     "@kirklin/logger": "catalog:dev",
     "@larksuiteoapi/node-sdk": "catalog:dev",
+    "dotenv": "catalog:",
     "zod": "catalog:dev"
   },
   "devDependencies": {
